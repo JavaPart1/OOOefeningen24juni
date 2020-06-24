@@ -4,6 +4,13 @@ public abstract class Shape {
     private static int count;
     private int x;
     private int y;
+    private String color;
+    private boolean filled;
+
+    public Shape(String color, boolean filled) {
+        this.color = color;
+        this.filled = filled;
+    }
 
     public Shape() {
     }
@@ -18,6 +25,22 @@ public abstract class Shape {
         this.y = y;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public boolean isFilled() {
+        return filled;
+    }
+
+    public void setFilled(boolean filled) {
+        this.filled = filled;
+    }
+
     abstract double getArea();
 
     abstract double getPerimeter();
@@ -25,6 +48,9 @@ public abstract class Shape {
         return count;
     }
 
+    public static void setCount(int nwCount){
+        count = nwCount;
+    }
     public int getX() {
         return x;
     }

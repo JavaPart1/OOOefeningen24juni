@@ -5,6 +5,19 @@ public class Triangle extends Shape{
     private int width;
     private int height;
     private int perpendicular;
+    private int side1;
+    private int side2;
+    private int side3;
+
+    public Triangle(String color, boolean filled, int side1, int side2, int side3) {
+        super(color, filled);
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
+        setCount(getCount() + 1);
+        width = side2;
+        height = side3;
+    }
 
     public Triangle(Triangle t) {
     }
@@ -15,12 +28,14 @@ public class Triangle extends Shape{
     public Triangle(int width, int height) {
         this.width = width;
         this.height = height;
+        setCount(getCount() + 1);
     }
 
     public Triangle(int x, int y, int width, int height) {
         super(x, y);
         this.width = width;
         this.height = height;
+        setCount(getCount() + 1);
     }
 
     public int getWidth() {
@@ -49,11 +64,24 @@ public class Triangle extends Shape{
 
     @Override
     double getArea() {
-        return 0;
+        return width*height/2;
     }
 
     @Override
     double getPerimeter() {
-        return 0;
+        return (double) side1+side2+side3;
+    }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "side1=" + side1 +
+                ", side2=" + side2 +
+                ", side3=" + side3 +
+                ", kleur=" + getColor() +
+                ", gevuld=" + isFilled() +
+                ", omtrek=" + getPerimeter() +
+                ", opp=" + getArea() +
+                '}';
     }
 }
