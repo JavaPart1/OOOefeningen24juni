@@ -1,7 +1,9 @@
 package be.vdab.OOOef24juni;
 
 public class Circle extends Shape {
+    // nutteloze variabele?
     public final static int ANGLES = 0;
+    // de math klasse heeft een PI constante reeds ingebouwd. 'Math.PI'
     public final double PI = 3.14;
     private int radius;
 
@@ -33,6 +35,7 @@ public class Circle extends Shape {
     public double getPerimeter(){
         return 2*radius*PI;
     }
+    // implementatie?
     public void grow(int d){}
 
     @Override
