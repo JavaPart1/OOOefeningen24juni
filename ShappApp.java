@@ -14,5 +14,8 @@ public class ShappApp {
         System.out.println("Maak een cirkel");
         Circle circ = new Circle(9);
         System.out.println(circ.toString());
+        System.out.println("Maak een vierkant");
+        Square vrknt = new Square(3);
+        System.out.println(vrknt.toString());
     }
 }
